@@ -14,4 +14,4 @@ To answer these questions, along with many others, the first step required is to
 
 This step is pretty straightforward as all of the data is contained in separate CSV files. Simply by clicking "Get Data", clicking on CSV and loading each of the tables in, keeping everything else the same, we now have our 9 tables loaded in:
 
-![image_alt] (
+![image_alt] (https://github.com/brianhornick/PowerBI-Bicycle-Business-Project/blob/main/Image/Screenshot%202025-03-03%20161907.png?raw=true)
