@@ -49,3 +49,5 @@ Before we start creating any measures or visuals, the last thing that would impr
 ```
 The (#"Changed Type") part will just be changed to whatever the last transformation was, luckily the query editor automatically adds this part in anyways when you create a new step in the editor. Table.TransformColumnNames as well as Text.Proper and Text.Replace will ensure the column names are changed to proper case, replacing the underscores with spaces. "each" is used to select all the column names.
 
+I also changed Order_items table to Order Items
+
