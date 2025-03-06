@@ -51,3 +51,14 @@ The (#"Changed Type") part will just be changed to whatever the last transformat
 
 I also changed Order_items table to Order Items
 
+### Step 6: Creating a Revenue Measure
+
+To create a revenue measure, three columns must be factored in: "List Price," "Quantity," and "Discount." These are all found in the "Order Items" table. Using the SUMX function that can calculate this iterated for each row, the measure can be created like this:
+
+```
+Revenue = SUMX('Order Items', 'Order Items'[List Price] * 'Order Items'[Quantity] * (1 - 'Order Items'[Discount]))
+```
+
+The discount is the percentage the customer paid less than the "List Price," so multiplying "List Price" times "Quantity" times 1 minus the "Discount" will give the revenue for each row.
+
+
