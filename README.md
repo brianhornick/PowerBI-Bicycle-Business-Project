@@ -1,12 +1,30 @@
-# Analyzing Business Data and Building a Dashboard in Power BI - by Brian Hornick
+# Analyzing Business Data and Building a Report in Power BI - by Brian Hornick
 ## Problem Statement
-A bicycle chain company currently owns 3 stores in the United States and needs a dashboard to make better data-driven decisions. This dataset was found on Kaggle.com LINK: (https://www.kaggle.com/datasets/dillonmyrick/bike-store-sample-database). This dataset will serve as a base, which we will use to design our dashboard. I will be outlining each step taken in creating this dashboard and the end goal is to complete a sharp-looking, easy-to-use dashboard that can answer a variety of key questions with ease. Some of these questions include:
+A bicycle chain company, SaveOnBikes, owns 3 stores in the United States and the owner needs a visual report to make better data-driven decisions. This dataset was found on Kaggle.com LINK: (https://www.kaggle.com/datasets/dillonmyrick/bike-store-sample-database). This dataset will serve as a base, which we will use to design our report. I will be outlining each step taken in creating this dashboard and the end goal is to complete a sharp-looking, easy-to-use dashboard that can answer a variety of key questions with ease. These questions include:
+
+General Sales:
 
 1. How does revenue differ by store?
 2. What products sell the most, how does model year impact sales?
 3. How does sales differ by brand?
-4. What months of the year are sales the highest? Is the stock high enough to meet demand?
-5. How soon on average are orders being shipped before they are required? How often are orders being placed too late?
+4. What months of the year are sales the highest?
+5. How does this quarter's revenue compare to last quarter?
+
+Inventory:
+
+1. Is inventory high enough to meet demand for the top products?
+2. What products have seen the largest increase in demand recently?
+3. What products have performed the worst?
+4. What is the average shipping times?
+5. What percentage of orders are arriving after the required date?
+
+Focused Sales & Customers
+
+1. Who are our top customers?
+2. What do the product mixes look like on what customers order?
+3. What is the percentage of sales lost by price increases?
+4. Which stores are seeing the largest revenue growth?
+5. Which staff members are contributing the most to sales?
 
 To answer these questions, along with many others, the first step required is to import the dataset into Power BI.
 
@@ -60,5 +78,13 @@ Revenue = SUMX('Order Items', 'Order Items'[List Price] * 'Order Items'[Quantity
 ```
 
 The discount is the percentage the customer paid less than the "List Price," so multiplying "List Price" times "Quantity" times 1 minus the "Discount" will give the revenue for each row.
+
+### Step 7: Creating a Previous Quarter Measure
+
+To create a KPI visualization that compares a selected quarter's revenue to the previous quarter's revenue, one must create a measure that calculates the previous quarter's revenue. This can be done using the DAX function "PREVIOUSQUARTER," as shown below:
+
+```
+PreviousQuarter = CALCULATE([Revenue], PREVIOUSQUARTER('DateTable'[Date]))
+```
 
 
