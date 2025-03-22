@@ -86,5 +86,6 @@ To create a KPI visualization that compares a selected quarter's revenue to the 
 ```
 PreviousQuarter = CALCULATE([Revenue], PREVIOUSQUARTER('DateTable'[Date]))
 ```
+### Step 8: Designing the General Sales Page
 
-
+![image_alt](https://github.com/brianhornick/PowerBI-Bicycle-Business-Project/blob/main/Image/Screenshot%202025-03-22%20151303.png?raw=true)
