@@ -5,8 +5,8 @@ A bicycle chain company, SaveOnBikes, owns 3 stores in the United States and the
 General Sales:
 
 1. How does revenue differ by store?
-2. What products sell the most, how does model year impact sales?
-3. How does sales differ by brand?
+2. What products sell the most?
+3. How does sales differ by brand and model year?
 4. What months of the year are sales the highest?
 5. How does this quarter's revenue compare to last quarter?
 
@@ -89,3 +89,5 @@ PreviousQuarter = CALCULATE([Revenue], PREVIOUSQUARTER('DateTable'[Date]))
 ### Step 8: Designing the General Sales Page
 
 ![image_alt](https://github.com/brianhornick/PowerBI-Bicycle-Business-Project/blob/main/Image/Screenshot%202025-03-22%20151303.png?raw=true)
+
+Now that the measures needed are created, we can design our first page. This is the general sales page which seeks to give answers to the 5 questions listed under "General Sales". For the overall structure I used a deep bluish-green background, complimented with a lighter blue background for the visuals to create some contrast and allow the visuals to "pop". Starting on the top left, we have the title (SaveOnBikes Sales Dashboard) which clarifies what this page is. Next below that, I added 2 cards that show the total revenue and total orders. These visuals interact filter with the other visuals so that users can see these figures by year, quarter, store, brand, model year or by the top 5 products. Next, I added a KPI visual that shows the most recent quarter's results compared to the previous. 2 slicers were added so that users can narrow their view down by year and quarter, respectively. A bar chart was added to show the total revenue for the top 5 products. Beside that, a line chart shows revenue by month to show users which months have resulted in the highest sales volume. I added a pie chart to show the revenue share segmented by the 3 stores. At the bottom, I added a matrix visual which shows the total revenue by model year and brand. Finally, beside that page navigation buttons were set for accessibility. 
