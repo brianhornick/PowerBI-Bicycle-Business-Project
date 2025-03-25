@@ -12,22 +12,21 @@ General Sales:
 Inventory:
 
 1. Is inventory high enough to meet demand for the top products?
-2. What products have seen the largest increase in demand recently?
-3. What is the average shipping times?
-4. What percentage of orders are arriving after the required date, how has COVID impacted this?
+2. What products are in high demand recently?
+3. What percentage of orders are arriving after the required date, how has COVID impacted this?
 
-Focused Sales & Customers
+Customers & Sales:
 
 1. Who are our top customers?
-2. What do the product mixes look like on what customers order?
-3. What is the percentage of sales lost by price increases?
-4. Which stores are seeing the largest revenue growth?
-5. Which staff members are contributing the most to sales?
+2. Which stores are seeing the largest revenue growth?
+3. Which staff members are contributing the most to sales?
 
-Brand and Products
+Brand and Products:
 1. What is the top selling brand, has this changed throughout the years?
 2. Are customers more often paying more for the newer or settling for the older products?
-
+3. What is the percentage of sales lost by price increases?
+4. What do the products are most often purchased together?
+   
 To answer these questions, along with many others, the first step required is to import the dataset into Power BI.
 
 ### Step 1: Importing the Dataset
@@ -97,7 +96,7 @@ Profit = [Revenue] - SUMX('Order Items', 'Order Items'[Unit Cost])
 ```
 ### Step 9: Creating the Profit Margin Measure
 
-As, each transaction has a different profit margin as unit cost varies by product and time of purchase (I modified the unit cost for each product to jump by small increments every 1000 transactions, to reflect inflation), we must calculate the average profit margin, iterated for each transaction. I used the formula below to do this:
+As each transaction has a different profit margin as unit cost varies by product and time of purchase (I modified the unit cost for each product to jump by small increments every 1000 transactions, to reflect inflation), we must calculate the average profit margin, iterated for each transaction. I used the formula below to do this:
 
 ```
 Average Profit Margin (%) = AVERAGEX('Order Items', DIVIDE([Profit], [Revenue]) * 100)
