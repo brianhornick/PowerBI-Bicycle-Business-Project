@@ -1,4 +1,4 @@
-# Analyzing Business Data and Building a Report in Power BI - by Brian Hornick
+# Analyzing Business Data and Building a Comprehensive Sales Report in Power BI - by Brian Hornick
 ## Problem Statement
 A bicycle chain company, SaveOnBikes, owns 3 stores in the United States and the owner needs a visual report to make better data-driven decisions. This dataset was found on Kaggle.com LINK: (https://www.kaggle.com/datasets/dillonmyrick/bike-store-sample-database). I used ChatGPT to add some extra sales data up until 2021 and modified some of the values to more accurately resemble a business (changing average delay times for shipping to vary by make). I also added a unit cost column to calculate measures like profit and profit margin. This dataset will serve as a base, which we will use to design our report. I will be outlining each step taken in creating this dashboard and the end goal is to complete a sharp-looking, easy-to-use dashboard that can answer a variety of key questions with ease. These questions include:
 
@@ -143,8 +143,16 @@ RETURN
 ```
 
 This measure is a little more complex than the others so far for a couple of reasons. One is that we must create 2 variables, "TotalOrders" and "LateOrders" and then divide them to calculate this.
-The other is that 'Order Date', not 'Shipped Date' has an active relationship with the date table, however rather than create another date table, we can use the "USERELATIONSHIP" function.
+The other is that 'Order Date', not 'Shipped Date' has an active relationship with the date table; however rather than create another date table, we can use the "USERELATIONSHIP" function.
 
-First, we count all the orders in the 'TotalOrders' variable, then count all the orders where the date the products shipped was later than the required date ('LateOrders) and then divide the late orders by the total orders to get the 'Late Orders %'.
+First, we count all the orders in the 'TotalOrders' variable, then count all the orders where the date the products shipped was later than the required date ('LateOrders), and then divide the late orders by the total orders to get the 'Late Orders %'.
 
 ### Step 12: Designing The Inventory View
+
+![image_alt](https://github.com/brianhornick/PowerBI-Bicycle-Business-Project/blob/main/Image/Screenshot%202025-03-26%20155507.png?raw=true)
+
+In this page, starting from the top left, I included a bar graph that displays the top 10 products ordered by quantity. As the product names are quite long, rather than include them in the X Axis, I simply use the X Axis title to let users know they can hover over the graph to see the product name. Conditional formatting is added so that items low on stock show up as red. I determined low on stock as having less quantity in stock than the amount that product has been ordered in the past 2 years. (In the real-world, this may more be like the last few months; I just wanted the graph to show some red bars).
+
+To the right, I added a bar graph that shows late order percentage by time and drill/expand down is enabled to see months and quarter metrics. I then added a filter to the right to enable seeing these values by certain years, quarters, and/or months and then added a card below to clearly display 'Late Order %'.
+
+The scatter chart at the bottom shows a view of all products, comparing their in stock numbers to the quantity ordered in the past 2 years. The same conditional formatting is used to show items that are low on stock.
