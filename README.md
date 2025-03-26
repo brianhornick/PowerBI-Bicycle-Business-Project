@@ -101,10 +101,16 @@ Profit = [Revenue] - SUMX('Order Items', 'Order Items'[Unit Cost])
 As each transaction has a different profit margin as unit cost varies by product and time of purchase (I modified the unit cost for each product to jump by small increments every 1000 transactions, to reflect inflation), we must calculate the average profit margin, iterated for each transaction. I used the formula below to do this:
 
 ```
-Average Profit Margin (%) = AVERAGEX('Order Items', DIVIDE([Profit], [Revenue]) * 100)
+Average Profit Margin (%) = AVERAGEX('Order Items', DIVIDE([Profit], [Revenue]))
 ```
 ### Step 10: Creating the Executive Sales View
 
 Now that we have our measures it's time to design the first page. I have included a screenshot below for reference:
 
 ![image_alt](https://github.com/brianhornick/PowerBI-Bicycle-Business-Project/blob/main/Image/Screenshot%202025-03-26%20151734.png?raw=true)
+
+Starting from the top, I created a heading bar that displays the company, what this dashboard is and page navigation to assist users with page navigation (and I think it looks sleek). 
+
+Below that, I have inserted a card bar that shows revenue, orders, unit cost, and profit as well as the KPI visual that can compare this quarter's revenue to last quarter's. On the far right, there is a slicer that can allow filtering by any select year, quarter and/or month. 
+
+Next, I added 4 line graphs that show how these key metrics have changed over time. I added the date heirachy to the X axis so users can drill up, drill down or expand down to view these metrics by different time frames. I also added in a button slicer that switches all the line charts to bar graphs with data labels as shown below:
