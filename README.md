@@ -158,3 +158,7 @@ In this page, starting from the top left, I included a bar graph that displays t
 To the right, I added a bar graph that shows late order percentage by time and drill/expand down is enabled to see months and quarter metrics. I then added a filter to the right to enable seeing these values by certain years, quarters, and/or months and then added a card below to clearly display 'Late Order %'.
 
 The scatter chart at the bottom shows a view of all products, comparing their in stock numbers to the quantity ordered in the past 2 years. The same conditional formatting is used to show items that are low on stock.
+
+### Step 13: Designing the Customer & Sales View
+
+
