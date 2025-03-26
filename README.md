@@ -80,7 +80,7 @@ Revenue = SUMX('Order Items', 'Order Items'[List Price] * 'Order Items'[Quantity
 
 The discount is the percentage the customer paid less than the "List Price," so multiplying "List Price" times "Quantity" times 1 minus the "Discount" will give the revenue for each row.
 
-### Step 7: Creating a Previous Quarter Measure
+### Step 7: Creating This Quarter and Previous Quarter Measures
 
 To create a KPI visualization that compares a selected quarter's revenue to the previous quarter's revenue, we must create 2 measures that calculate this quarter's revenue and the previous quarter's revenue, respectively. This can be done using the DAX functions "DATESQTD" and "PREVIOUSQUARTER," as shown below:
 ```
@@ -104,4 +104,6 @@ As each transaction has a different profit margin as unit cost varies by product
 Average Profit Margin (%) = AVERAGEX('Order Items', DIVIDE([Profit], [Revenue]) * 100)
 ```
 ### Step 10: Creating the Executive Sales View
+
+Now that we have our measures it's time to design the first page. I have included a screenshot below for reference:
 
