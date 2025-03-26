@@ -117,7 +117,9 @@ Next, I added 4 line graphs that show how these key metrics have changed over ti
 
 ![image_alt](https://github.com/brianhornick/PowerBI-Bicycle-Business-Project/blob/main/Image/Screenshot%202025-03-26%20152528.png?raw=true)
 
-I defaulted some of the drill features differently so that the charts could answer questions such as, "What months are revenue the highest?" without the user needing to drill. 
+I defaulted some of the drill features differently so that the charts could answer questions such as, "What months are revenue the highest?" without the user needing to drill.
+
+I added some design and colour formatting accross all pages such as light colour backgrounds to help the visuals pop but not create too much contrast that it hurts the eyes. I also rounded the corners of the visual panes and added line bars to separate the visuals.
 
 ### Step 11: Creating the Late Orders % Measure
 
