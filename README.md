@@ -109,8 +109,42 @@ Now that we have our measures it's time to design the first page. I have include
 
 ![image_alt](https://github.com/brianhornick/PowerBI-Bicycle-Business-Project/blob/main/Image/Screenshot%202025-03-26%20151734.png?raw=true)
 
-Starting from the top, I created a heading bar that displays the company, what this dashboard is and page navigation to assist users with page navigation (and I think it looks sleek). 
+Starting from the top, I created a heading bar that displays the company, what this dashboard is and page navigation to assist users with page navigation (and I think it looks sleek). This bar will display across all pages.
 
 Below that, I have inserted a card bar that shows revenue, orders, unit cost, and profit as well as the KPI visual that can compare this quarter's revenue to last quarter's. On the far right, there is a slicer that can allow filtering by any select year, quarter and/or month. 
 
 Next, I added 4 line graphs that show how these key metrics have changed over time. I added the date heirachy to the X axis so users can drill up, drill down or expand down to view these metrics by different time frames. I also added in a button slicer that switches all the line charts to bar graphs with data labels as shown below:
+
+![image_alt](https://github.com/brianhornick/PowerBI-Bicycle-Business-Project/blob/main/Image/Screenshot%202025-03-26%20152528.png?raw=true)
+
+I defaulted some of the drill features differently so that the charts could answer questions such as, "What months are revenue the highest?" without the user needing to drill. 
+
+### Step 11: Creating the Late Orders % Measure
+
+It is now time to move to our inventory view. The key metric here is late orders % as orders must be placed well enough in advance in order for customers to receive them on time. As the last year in this dataset is 2020, COVID has just hit making shipping times take longer. To calculate this here is the formula I used:
+
+```
+Late Orders % = 
+VAR TotalOrders = 
+    CALCULATE(
+        COUNT(Orders[Order Date]),
+        USERELATIONSHIP(Orders[Shipped Date], DateTable[Date])
+    )
+
+VAR LateOrders = 
+    CALCULATE(
+        COUNT(Orders[Order Date]),
+        Orders[Shipped Date] > Orders[Required Date],
+        USERELATIONSHIP(Orders[Shipped Date], DateTable[Date])
+    )
+
+RETURN 
+    DIVIDE(LateOrders, TotalOrders, 0)
+```
+
+This measure is a little more complex than the others so far for a couple of reasons. One is that we must create 2 variables, "TotalOrders" and "LateOrders" and then divide them to calculate this.
+The other is that 'Order Date', not 'Shipped Date' has an active relationship with the date table, however rather than create another date table, we can use the "USERELATIONSHIP" function.
+
+First, we count all the orders in the 'TotalOrders' variable, then count all the orders where the date the products shipped was later than the required date ('LateOrders) and then divide the late orders by the total orders to get the 'Late Orders %'.
+
+### Step 12: Designing The Inventory View
