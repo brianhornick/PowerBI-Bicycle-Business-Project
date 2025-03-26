@@ -82,8 +82,10 @@ The discount is the percentage the customer paid less than the "List Price," so 
 
 ### Step 7: Creating a Previous Quarter Measure
 
-To create a KPI visualization that compares a selected quarter's revenue to the previous quarter's revenue, one must create a measure that calculates the previous quarter's revenue. This can be done using the DAX function "PREVIOUSQUARTER," as shown below:
-
+To create a KPI visualization that compares a selected quarter's revenue to the previous quarter's revenue, we must create 2 measures that calculate this quarter's revenue and the previous quarter's revenue, respectively. This can be done using the DAX functions "DATESQTD" and "PREVIOUSQUARTER," as shown below:
+```
+This Quarter Rev = CALCULATE([Revenue], DATESQTD('DateTable'[Date]))
+```
 ```
 PreviousQuarter = CALCULATE([Revenue], PREVIOUSQUARTER('DateTable'[Date]))
 ```
