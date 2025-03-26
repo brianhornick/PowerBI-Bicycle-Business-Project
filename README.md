@@ -24,8 +24,7 @@ Customers & Sales:
 Brand and Products:
 1. What is the top selling brand, has this changed throughout the years?
 2. Are customers more often paying more for the newer or settling for the older products?
-3. What is the percentage of sales lost by price increases?
-4. What do the products are most often purchased together?
+3. What two products are most often purchased together?
    
 To answer these questions, along with many others, the first step required is to import the dataset into Power BI.
 
