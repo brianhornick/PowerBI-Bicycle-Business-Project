@@ -107,3 +107,4 @@ Average Profit Margin (%) = AVERAGEX('Order Items', DIVIDE([Profit], [Revenue]) 
 
 Now that we have our measures it's time to design the first page. I have included a screenshot below for reference:
 
+![image_alt](https://github.com/brianhornick/PowerBI-Bicycle-Business-Project/blob/main/Image/Screenshot%202025-03-26%20151734.png?raw=true)
