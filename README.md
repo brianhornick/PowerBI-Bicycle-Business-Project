@@ -181,4 +181,4 @@ This calculation uses the MAX function to find the most recent order date. Then 
 
 ### Step 15: Designing the Brand & Product View
 
-
+![image_alt](https://github.com/brianhornick/PowerBI-Bicycle-Business-Project/blob/main/Image/Screenshot%202025-03-27%20185728.png?raw=true)
