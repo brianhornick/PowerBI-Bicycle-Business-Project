@@ -18,7 +18,7 @@ Inventory:
 Customers & Sales:
 
 1. Who are our top customers?
-2. Which stores are seeing the largest revenue growth?
+2. Which stores are seeing the largest revenue growth in the last quarter?
 3. Which staff members are contributing the most to sales?
 
 Brand and Products:
@@ -198,5 +198,32 @@ To do this we simply hit publish in the home menu of Power BI desktop. I publish
 Once done in the menu, I hit create app, set the content to the report and now the app is ready-to-go.
 
 Here is the link to the app: https://app.powerbi.com/Redirect?action=OpenApp&appId=99ca33f7-82f5-462b-aade-9aa62fb5c9c7&ctid=8eab7711-b6aa-4109-91b8-273ad283b63d&experience=power-bi
+
+## Conclusion
+
+Now that we have published our app, the staff at SaveOnBikes now have a versatile dashboard that can assist them in making a wide range of data-driven decisions. Looking back at some of the problem statement questions, let's use this dashboard to get some answers.
+
+Executive Sales View:
+- The cards are able to show the key 4 metrics, filtered by any year, quarter and/or month
+- The bar graph on the top right shows that the highest revenue months are January and July
+- Profit was $840K last quarter, almost a 20% rise from last quarter
+- Profit was at it's highest in 2018, has dipped down to it's lowest since 2016. Profit margin has been steady since 2018.
+
+Inventory View:
+- The bar chart on the top right shows most top products are well stocked, however "Sun Bicycles Biscayne Tandem CB - 2017" and "Electra Townie Original 21D EQ Ladies' -2018" are running a bit low, along with a few other non-top products shown in the scatter chart
+- The products in high demand can be found easily in the bar graph
+- Late orders are quite high this year at 62.41% for the year, however, that figure is actually down from 2019, so COVID doesn't seem to be impacting it too greatly (Or recent efforts to correct the late orders have nullified COVID's effect)
+
+Customers and Store View:
+
+- Top Customers can be found in the bottom right bar graph, Grant Abbott is the #1 customer who has purchased over $250000 of goods
+- By clicking on the stores in the area chart on the left to filter, we can see that 'Rowlett Bikes' has seen the largest growth of 165.46% in this quarter vs last
+- The top 2 staff members are Venita Daniel and Marcelene Boyer, each with well over $5M in sales
+
+Brands and Product View:
+
+- The top 2 brands, by far are Trek and Electra, both have held the top spot, currently the top brand is Trek in terms of revenue
+- Based on the matrix, newer products have been struggling, the 2019 and 2020 model years, even when filtered by the most recent year, 2020, have had only a small contribution to overall sales
+- "Electra Daydreamer 3i Ladies' - 2018" and "Trek 820 - 2018" haven't sold a single unit since 2018, there are also a long list of products that didn't sell at all in 2020
 
 
