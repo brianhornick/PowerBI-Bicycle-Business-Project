@@ -160,7 +160,7 @@ The scatter chart at the bottom shows a view of all products, comparing their in
 
 ### Step 13: Designing the Customer & Sales View
 
-![image_alt](https://github.com/brianhornick/PowerBI-Bicycle-Business-Project/blob/main/Image/Screenshot%202025-03-26%20172528.png?raw=true)
+![image_alt](https://github.com/brianhornick/PowerBI-Bicycle-Business-Project/blob/main/Image/Screenshot%202025-03-27%20191739.png?raw=true)
 
 This dashboard functions similarly to the executive sales view, but instead of showing general metrics over time, it's designed to show metrics by store, customer and staff. I used the same card and filter bar at the top as the executive view so that various metrics can be displayed and users can filter by different time frames. 
 
