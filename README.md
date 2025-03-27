@@ -181,4 +181,10 @@ This calculation uses the MAX function to find the most recent order date. Then 
 
 ### Step 15: Designing the Brand & Product View
 
-![image_alt](https://github.com/brianhornick/PowerBI-Bicycle-Business-Project/blob/main/Image/Screenshot%202025-03-27%20185728.png?raw=true)
+![image_alt](https://github.com/brianhornick/PowerBI-Bicycle-Business-Project/blob/main/Image/Screenshot%202025-03-27%20191748.png?raw=true)
+
+Starting From the top, I added in the 4 key card metrics as well as 3 slicers so users can filter by any combination of brand, category and product. 
+
+I then added an area chart to show how the revenue by the top 5 brands has changed over time. To the right is a table which shows the last date of sale of every product ordered by least recent, so that users can see which products to unlist/reduce price.
+
+At the bottom is a matrix that breaks down revenue by brand and model year.
