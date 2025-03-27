@@ -24,7 +24,7 @@ Customers & Sales:
 Brand and Products:
 1. What is the top selling brand, has this changed throughout the years?
 2. Are customers more often paying more for the newer or settling for the older products?
-3. What products have seen the biggest decline in sales?
+3. What products haven't sold in the longest time?
    
 To answer these questions, along with many others, the first step required is to import the dataset into Power BI.
 
@@ -165,3 +165,20 @@ The scatter chart at the bottom shows a view of all products, comparing their in
 This dashboard functions similarly to the executive sales view, but instead of showing general metrics over time, it's designed to show metrics by store, customer and staff. I used the same card and filter bar at the top as the executive view so that various metrics can be displayed and users can filter by different time frames. 
 
 Below that, starting to the right I added an area chart which shows revenue by store. Left of that I added 2 bar graphs which show sales by staff and the top 10 customers.
+
+### Step 14: Adding a Last Sale Date Measure
+
+In order to find which products have gone the longest without a sale we need a way to calculate the last date of sale. Using this formula, we can do just that:
+
+```
+Last Sale Date = 
+    CALCULATE(
+            MAX(Orders[Order Date]),
+            FILTER('Order Items', 'Order Items'[Product Id] = [Product ID])
+        )
+```
+This calculation uses the MAX function to find the most recent order date. Then this calculation is filtered by rows where the Product ID in the 'Order Items' table matches with the Product Id in question.
+
+### Step 15: Designing the Brand & Product View
+
+
