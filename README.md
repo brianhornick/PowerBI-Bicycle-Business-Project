@@ -150,7 +150,7 @@ First, we count all the orders in the 'TotalOrders' variable, then count all the
 
 ### Step 12: Designing The Inventory View
 
-![image_alt](https://github.com/brianhornick/PowerBI-Bicycle-Business-Project/blob/main/Image/Screenshot%202025-03-26%20155507.png?raw=true)
+![image_alt](https://github.com/brianhornick/PowerBI-Bicycle-Business-Project/blob/main/Image/Screenshot%202025-03-27%20185728.png?raw=true)
 
 In this page, starting from the top left, I included a bar graph that displays the top 10 products ordered by quantity. As the product names are quite long, rather than include them in the X Axis, I simply use the X Axis title to let users know they can hover over the graph to see the product name. Conditional formatting is added so that items low on stock show up as red. I determined low on stock as having less quantity in stock than the amount that product has been ordered in the past 2 years. (In the real-world, this may more be like the last few months; I just wanted the graph to show some red bars).
 
