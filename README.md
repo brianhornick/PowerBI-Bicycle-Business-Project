@@ -188,3 +188,15 @@ Starting From the top, I added in the 4 key card metrics as well as 3 slicers so
 I then added an area chart to show how the revenue by the top 5 brands has changed over time. To the right is a table which shows the last date of sale of every product ordered by least recent, so that users can see which products to unlist/reduce price.
 
 At the bottom is a matrix that breaks down revenue by brand and model year.
+
+### Step 16: Publishing Report and Creating App
+
+Now that we have finished designing the report, it's time to publish to Power BI service and create an app with the report, so that others can use it.
+
+To do this we simply hit publish in the home menu of Power BI desktop. I published it to a new workspace I created, called "SaveOnBikes Report". 
+
+Once done in the menu, I hit create app, set the content to the report and now the app is ready-to-go.
+
+Here is the link to the app: https://app.powerbi.com/Redirect?action=OpenApp&appId=99ca33f7-82f5-462b-aade-9aa62fb5c9c7&ctid=8eab7711-b6aa-4109-91b8-273ad283b63d&experience=power-bi
+
+
